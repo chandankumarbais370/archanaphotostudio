@@ -57,10 +57,11 @@ justify-content:center;
 align-items:center;
 text-align:center;
 }
+.overlay{
+background:rgba(0,0,0,0.6);
 padding:40px;
 border-radius:15px;
 }
-
 .hero h1{
 font-size:60px;
 color:#d4af37;
