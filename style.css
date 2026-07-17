@@ -46,17 +46,17 @@ text-decoration:none;
 border-radius:30px;
 font-weight:bold;
 }
-
 .hero{
+display:flex;
 height:100vh;
-background: url("hero.jpg") center/cover no-repeat;
+background-image:url("hero.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 justify-content:center;
 align-items:center;
 text-align:center;
 }
-
-.overlay{
-background:rgba(0,0,0,.6);
 padding:40px;
 border-radius:15px;
 }
