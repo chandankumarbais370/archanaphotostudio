@@ -81,12 +81,16 @@ HEADER
     object-fit:cover;
     border:2px solid #d4af37;
 }
-
+.logo img:hover{
+    transform:scale(1.08);
+    transition:.3s;
+}
 .logo h2{
     color:#fff;
     font-size:24px;
     font-weight:700;
     letter-spacing:.5px;
+   text-transform:capitalize;
 }
 
 .nav-menu{
@@ -97,10 +101,9 @@ HEADER
 .nav-menu a{
     position:relative;
     color:#fff;
-    font-size:17px;
+   font-size:16px;
     font-weight:600;
     text-decoration:none;
-    transition:.35s;
    padding:8px 0;
 transition:.3s;
 }
