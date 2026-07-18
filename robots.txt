@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://archanaphotostudio.github.io/sitemap.xml
