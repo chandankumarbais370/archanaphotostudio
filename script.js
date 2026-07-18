@@ -1,22 +1,68 @@
-// Smooth scroll for menu links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
+/*=========================================
+        HERO SLIDER
+=========================================*/
+
+const heroSlider = new Swiper(".heroSlider", {
+    loop: true,
+    speed: 1000,
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });
 
-// Navbar shadow on scroll
+/*=========================================
+        MOBILE MENU
+=========================================*/
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+/*=========================================
+        CLOSE MENU
+=========================================*/
+
+document.querySelectorAll(".nav-menu a").forEach((link) => {
+
+    link.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+
+    });
+
+});
+
+/*=========================================
+        STICKY HEADER
+=========================================*/
+
+const header = document.getElementById("header");
+
 window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".navbar");
-  if (window.scrollY > 30) {
-    nav.style.boxShadow = "0 5px 15px rgba(0,0,0,0.4)";
-  } else {
-    nav.style.boxShadow = "none";
-  }
+
+    if (window.scrollY > 80) {
+
+        header.classList.add("sticky");
+
+    } else {
+
+        header.classList.remove("sticky");
+
+    }
+
 });
