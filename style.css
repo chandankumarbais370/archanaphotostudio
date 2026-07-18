@@ -988,3 +988,72 @@ height:320px;
 
 }
 }
+/*=========================================
+        FINAL PATCH
+=========================================*/
+
+/* Sticky Header */
+
+#header.sticky{
+    background:#000;
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+
+/* Mobile Menu */
+
+@media(max-width:992px){
+
+.nav-menu{
+
+position:absolute;
+top:85px;
+left:-100%;
+width:100%;
+background:#111;
+display:flex;
+flex-direction:column;
+padding:30px;
+gap:25px;
+transition:.4s;
+z-index:999;
+
+}
+
+.nav-menu.active{
+
+left:0;
+
+}
+
+}
+
+/* Gallery View More */
+
+#more-gallery{
+
+display:none;
+grid-template-columns:repeat(6,1fr);
+gap:18px;
+margin-top:18px;
+
+}
+
+@media(max-width:992px){
+
+#more-gallery{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:576px){
+
+#more-gallery{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
