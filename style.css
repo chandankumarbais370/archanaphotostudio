@@ -46,76 +46,83 @@ HEADER
 =========================== */
 
 .header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:9999;
-background:rgba(10,10,10,.35);
-backdrop-filter:blur(15px);
--webkit-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(212,175,55,.15);
-transition:all .4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10,10,10,.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(212,175,55,.15);
+    transition: all .4s ease;
 }
 
 .navbar{
-height:85px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-transition:.4s;
+    max-width:1200px;
+    margin:auto;
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    transition:.4s;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
-color:#fff;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
 }
 
 .logo img{
-width:60px;
-height:60px;
-border-radius:50%;
-border:2px solid #d4af37;
-object-fit:cover;
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #d4af37;
+    transition:.3s;
 }
 
 .logo h2{
-font-size:24px;
-font-weight:700;
+    color:#fff;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:.5px;
 }
 
 .nav-menu{
-display:flex;
-gap:35px;
+    display:flex;
+    align-items:center;
+    gap:35px;
 }
-
 .nav-menu a{
-position:relative;
-font-size:16px;
-font-weight:600;
-color:#fff;
-transition:.35s;
+    position:relative;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.35s;
 }
 
 .nav-menu a:hover{
-color:#d4af37;
+    color:#d4af37;
 }
 
 .nav-menu a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-8px;
-width:0%;
-height:2px;
-background:#d4af37;
-transition:.35s;
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:#d4af37;
+    transition:.35s;
 }
 
 .nav-menu a:hover::after{
-width:100%;
+    width:100%;
 }
 .menu-btn{
 display:none;
@@ -676,4 +683,12 @@ box-shadow:0 10px 30px rgba(0,0,0,.35);
 
 .header.sticky .navbar{
 height:72px;
+}
+.header.sticky{
+    background:#0b0b0b;
+    box-shadow:0 8px 30px rgba(0,0,0,.35);
+}
+
+.header.sticky .navbar{
+    height:75px;
 }
