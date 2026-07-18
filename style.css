@@ -329,11 +329,11 @@ ul{
     font-size:42px;
     margin-bottom:40px;
 }
-
 .gallery-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:22px;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
 }
 
 .gallery-grid img{
@@ -368,16 +368,20 @@ ul{
     grid-template-columns:repeat(2,1fr);
     gap:15px;
 }
+   .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+   }
 .gallery-grid img{
-    height:120px;
+    width:100%;
+    aspect-ratio:1/1;
     object-fit:cover;
+    border-radius:8px;
 }
-
-
-
-.card img,
-.gallery-grid img{
+.card img{
     height:220px;
+}
 }
 
 }
