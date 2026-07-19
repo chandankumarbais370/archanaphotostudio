@@ -792,3 +792,6 @@ LIGHTBOX
     background:#d4af37;
     color:#000;
 }
+.gallery-grid img.hide{
+    display:none;
+}
