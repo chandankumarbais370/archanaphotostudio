@@ -104,6 +104,7 @@ link.classList.add("active");
 }
 
 });
+    });
 //=========================
 // CLOSE MENU AFTER CLICK
 //=========================
@@ -312,5 +313,4 @@ document.querySelector(".call").style.opacity="0.9";
 //=========================
 // END
 //=========================
-});
 
