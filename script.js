@@ -332,15 +332,23 @@ gallery.forEach((img,index)=>{
 let expanded = false;
 
 viewBtn.addEventListener("click",(e)=>{
+
     e.preventDefault();
 
-   expanded = !expanded;
+    expanded = !expanded;
 
-updateGallery();
+    gallery.forEach((img,index)=>{
 
-viewBtn.textContent = expanded
-    ? "View Less"
-    : "View More Gallery";
+        if(index >= 12){
+            img.classList.toggle("hide", !expanded);
+        }
+
+    });
+
+    viewBtn.textContent = expanded
+        ? "View Less"
+        : "View More Gallery";
+
 });
 //=========================
 // BACK TO TOP
