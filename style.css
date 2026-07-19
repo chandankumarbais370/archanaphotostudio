@@ -695,3 +695,11 @@ height:72px;
 .header.sticky .navbar{
     height:75px;
 }
+/* Active Navbar */
+.nav-menu a.active{
+    color:#d4af37;
+}
+
+.nav-menu a.active::after{
+    width:100%;
+}
