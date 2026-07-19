@@ -479,15 +479,14 @@ contactForm.addEventListener("submit", function (e) {
         sendBtn.innerHTML = "Send Message";
         sendBtn.disabled = false;
 
-    }).catch(function (error) {
+   }).catch(function (error) {
 
-        console.log(error);
+    console.log(error);
 
-        alert("❌ Message Sending Failed!");
+    alert(error.text || JSON.stringify(error));
 
-        sendBtn.innerHTML = "Send Message";
-        sendBtn.disabled = false;
+    sendBtn.innerHTML = "Send Message";
+    sendBtn.disabled = false;
 
-    });
-
+});
 });
