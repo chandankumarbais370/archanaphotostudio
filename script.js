@@ -191,7 +191,7 @@ const galleryImages = document.querySelectorAll(".gallery-grid img");
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
-
+const counter = document.getElementById("counter");
 const closeBtn = document.querySelector(".close");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
