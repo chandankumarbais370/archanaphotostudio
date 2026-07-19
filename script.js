@@ -197,7 +197,9 @@ const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 
 let currentIndex = 0;
-
+function updateCounter(){
+    counter.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+}
 // Open
 galleryImages.forEach((img, index) => {
 
@@ -206,7 +208,7 @@ galleryImages.forEach((img, index) => {
         currentIndex = index;
 
         lightboxImg.src = img.src;
-
+updateCounter();
         lightbox.classList.add("show");
 
     });
@@ -245,7 +247,7 @@ function nextImage(){
     }
 
     lightboxImg.src=galleryImages[currentIndex].src;
-
+updateCounter();
 }
 
 // Previous
@@ -260,7 +262,7 @@ function prevImage(){
     }
 
     lightboxImg.src=galleryImages[currentIndex].src;
-
+updateCounter();
 }
 
 nextBtn.addEventListener("click",(e)=>{
