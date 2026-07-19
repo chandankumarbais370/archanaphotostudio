@@ -400,17 +400,19 @@ gap:18px;
 }
 
 .gallery-grid img{
-width:100%;
-height:240px;
-object-fit:cover;
-border-radius:16px;
-cursor:pointer;
-transition:.4s;
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:18px;
+    cursor:pointer;
+    transition:all .4s ease;
+    border:2px solid transparent;
 }
 
 .gallery-grid img:hover{
-transform:scale(1.05);
-box-shadow:0 12px 30px rgba(212,175,55,.35);
+    transform:translateY(-8px) scale(1.06);
+    border-color:#d4af37;
+    box-shadow:0 15px 35px rgba(212,175,55,.45);
 }
 
 .gallery-btn{
