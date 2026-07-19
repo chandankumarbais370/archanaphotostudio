@@ -448,3 +448,46 @@ setInterval(()=>{
     showReview();
 
 },4000);
+//=========================
+// EMAILJS CONTACT FORM
+//=========================
+
+const contactForm = document.getElementById("contactForm");
+const sendBtn = document.getElementById("sendBtn");
+
+contactForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    sendBtn.innerHTML = "Sending...";
+    sendBtn.disabled = true;
+
+    emailjs.send("service_d8nzymd", "template_peaq459", {
+
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        title: document.getElementById("title").value,
+        message: document.getElementById("message").value
+
+    }).then(function () {
+
+        alert("✅ Message Sent Successfully!");
+
+        contactForm.reset();
+
+        sendBtn.innerHTML = "Send Message";
+        sendBtn.disabled = false;
+
+    }).catch(function (error) {
+
+        console.log(error);
+
+        alert("❌ Message Sending Failed!");
+
+        sendBtn.innerHTML = "Send Message";
+        sendBtn.disabled = false;
+
+    });
+
+});
