@@ -855,3 +855,31 @@ SCROLL PROGRESS BAR
     z-index:9999;
     transition:width .1s linear;
 }
+/*=========================
+GALLERY FILTER
+=========================*/
+
+.gallery-filter{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.filter-btn{
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background:#181818;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+    border:1px solid rgba(212,175,55,.3);
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#d4af37;
+    color:#000;
+}
