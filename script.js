@@ -346,3 +346,29 @@ viewBtn.addEventListener("click",(e)=>{
         ? "View Less"
         : "View More Gallery";
 });
+//=========================
+// BACK TO TOP
+//=========================
+
+const backTop = document.getElementById("backTop");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 400){
+        backTop.classList.add("show");
+    }else{
+        backTop.classList.remove("show");
+    }
+
+});
+
+backTop.addEventListener("click",(e)=>{
+
+    e.preventDefault();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
