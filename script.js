@@ -313,4 +313,34 @@ document.querySelector(".call").style.opacity="0.9";
 //=========================
 // END
 //=========================
+//=========================
+// VIEW MORE GALLERY
+//=========================
 
+const gallery = document.querySelectorAll(".gallery-grid img");
+const viewBtn = document.getElementById("viewMoreBtn");
+
+// शुरुआत में केवल पहली 12 फोटो दिखेंगी
+gallery.forEach((img,index)=>{
+    if(index >= 12){
+        img.classList.add("hide");
+    }
+});
+
+let expanded = false;
+
+viewBtn.addEventListener("click",(e)=>{
+    e.preventDefault();
+
+    expanded = !expanded;
+
+    gallery.forEach((img,index)=>{
+        if(index >= 12){
+            img.classList.toggle("hide", !expanded);
+        }
+    });
+
+    viewBtn.textContent = expanded
+        ? "View Less"
+        : "View More Gallery";
+});
