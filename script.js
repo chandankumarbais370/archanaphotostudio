@@ -391,3 +391,34 @@ window.addEventListener("scroll",()=>{
     progressBar.style.width = progress + "%";
 
 });
+//=========================
+// GALLERY FILTER
+//=========================
+
+const filterBtns = document.querySelectorAll(".filter-btn");
+
+filterBtns.forEach(btn=>{
+
+    btn.addEventListener("click",()=>{
+
+        filterBtns.forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        gallery.forEach(img=>{
+
+            if(
+                filter==="all" ||
+                img.dataset.category===filter
+            ){
+                img.style.display="block";
+            }else{
+                img.style.display="none";
+            }
+
+        });
+
+    });
+
+});
