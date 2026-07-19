@@ -387,3 +387,56 @@ window.addEventListener("scroll",()=>{
     progressBar.style.width = progress + "%";
 
 });
+//=========================
+// REVIEW SLIDER
+//=========================
+
+const reviewTrack = document.querySelector(".review-track");
+const reviewCards = document.querySelectorAll(".review-card");
+const reviewPrev = document.querySelector(".review-prev");
+const reviewNext = document.querySelector(".review-next");
+
+let reviewIndex = 0;
+
+function showReview(){
+
+    reviewTrack.style.transform =
+    `translateX(-${reviewIndex * 100}%)`;
+
+}
+
+reviewNext.addEventListener("click",()=>{
+
+    reviewIndex++;
+
+    if(reviewIndex >= reviewCards.length){
+        reviewIndex = 0;
+    }
+
+    showReview();
+
+});
+
+reviewPrev.addEventListener("click",()=>{
+
+    reviewIndex--;
+
+    if(reviewIndex < 0){
+        reviewIndex = reviewCards.length - 1;
+    }
+
+    showReview();
+
+});
+
+setInterval(()=>{
+
+    reviewIndex++;
+
+    if(reviewIndex >= reviewCards.length){
+        reviewIndex = 0;
+    }
+
+    showReview();
+
+},4000);
