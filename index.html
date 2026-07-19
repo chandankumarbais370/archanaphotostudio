@@ -399,24 +399,49 @@ WhatsApp Now
 
 <div class="contact-form">
 
-<form>
+<form id="contactForm">
 
-<input type="text" placeholder="Your Name" required>
+    <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your Name"
+        required>
 
-<input type="tel" placeholder="Mobile Number" required>
+    <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Mobile Number"
+        required>
 
-<input type="email" placeholder="Email">
+    <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email">
 
-<textarea rows="6" placeholder="Your Message"></textarea>
+    <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Subject">
 
-<button type="submit" class="btn btn-gold">
+    <textarea
+        id="message"
+        name="message"
+        rows="6"
+        placeholder="Your Message"
+        required></textarea>
 
-Send Message
-
-</button>
+    <button
+        type="submit"
+        class="btn btn-gold"
+        id="sendBtn">
+        Send Message
+    </button>
 
 </form>
-
 </div>
 
 </div>
@@ -492,7 +517,11 @@ class="call">
 <i class="fa-solid fa-phone"></i>
 
 </a>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script>
+emailjs.init("eXQsC4DI3JWe-zokQ");
+</script>
 <script src="script.js"></script>
 
 </body>
